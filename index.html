@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular Architecture Demo</title>   
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">                
+    </head>
+    <body>
+        
+        <!-- Main container -->
+        <div id="viewport" ng-app="testApp">
+            <div ui-view></div>
+        </div>
+        
+        <!-- Dependecy scripts -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
+        
+        <script src="app/utils/Utils.js"></script>
+        <script src="app/app.js"></script> 
+        
+        <script src="app/modules/layout/login/loginController.js"></script>
+        <script src="app/modules/layout/headerSideBar/headerSideBarController.js"></script>
+        
+        <script src="app/modules/A/aConfig.js"></script>
+        <script src="app/modules/A/aController.js"></script>
+        
+        <script src="app/modules/B/bConfig.js"></script>
+        <script src="app/modules/B/bController.js"></script>
+        
+        <script src="app/modules/C/cConfig.js"></script>
+        <script src="app/modules/C/cController.js"></script>
+        <script></script>
+    </body>
+</html>
