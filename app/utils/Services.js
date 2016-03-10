@@ -4,6 +4,8 @@
 	This page is used to make api calls easier.
 	We can customize this file for handling auth token mechanisms by overriding success and error callbacks.
 
+	authorization Bearer 7f317e03-5657-4bfb-a0d1-5b29cb6fcc62
+
 */
 
 

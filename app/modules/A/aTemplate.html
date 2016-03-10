@@ -1,1 +1,28 @@
-<h1>A</h1>
+<div class="row" ng-init="_init()">
+    <div class="col-md-12">
+        <div class="table-container">
+            <h5>Customer Details</h5>
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+              </tr>
+              <tr ng-repeat="person in modelFactory.personResultSet">
+                <td><span ng-hide="modelFactory.personRowsIsEditable[$index]">{{person.name}}</span> <input type="text" ng-show="modelFactory.personRowsIsEditable[$index]" ng-model="person.name"/></td>
+                <td><span ng-hide="modelFactory.personRowsIsEditable[$index]">{{person.age}}</span> <input type="text" ng-show="modelFactory.personRowsIsEditable[$index]" ng-model="person.age"/></td>
+                <td>
+                    <button ng-show="modelFactory.personRowsIsEditable[$index]" ng-click="initSave(person, $index)">Save</button>
+                    <button ng-hide="modelFactory.personRowsIsEditable[$index]" ng-click="initEdit($index)">Edit</button>
+                    <button ng-hide="modelFactory.personRowsIsEditable[$index]" ng-click="initDelete(person, $index)">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" ng-model="modelFactory.newName" placeholder="Name" /></td>
+                <td><input type="text" ng-model="modelFactory.newAge" placeholder="Age" /></td>
+                <td><button ng-click="initCreate()">{{modelFactory.createButton}}</button></td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>

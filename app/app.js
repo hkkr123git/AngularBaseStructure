@@ -3,9 +3,7 @@
 (function(){
     var app = angular.module('testApp',[
         'ui.router',         
-        'aModule',
-        'bModule',
-        'cModule'
+        'aModule'
     ]);
     
      app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {    
@@ -31,12 +29,6 @@
                 'headerSidebar@root': {
                     templateUrl: 'app/modules/layout/headerSidebar/headerSideBarTemplate.html',
                     controller: 'headerSidebarCntrlr'
-                },
-                'footerHolder@root': {
-                    /*
-                    templateUrl: '',
-                    controller: ''
-                    */
                 }
             }
         });

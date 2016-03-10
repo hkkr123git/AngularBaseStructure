@@ -13,6 +13,7 @@
         };
         
         $scope.loginClick = function(){
+            
             if($scope.model.formData.userName === 'a' && $scope.model.formData.pass === 'a'){
                 $state.go('root.a');
             }
